@@ -1,0 +1,177 @@
+@font-face {
+    font-family: 'typewriter';
+    src: url('assets/American\ Typewriter\ Regular.ttf') format('truetype');
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'typewriter';
+}
+
+body {
+    background-color: #fbf9ef;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: none;
+}
+
+.container-img {
+    width: 85vw;
+    position: absolute;
+}
+
+.content-co {
+    display: flex;
+    width: 85vw;
+    height: 44vw;
+    margin-top: 7.5vw;
+    z-index: 2;
+    position: relative;
+}
+
+.left-content {
+    height: 100%;
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2vw;
+}
+
+.left-content p {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    margin-bottom: 1vw;
+    font-size: 1.2vw;
+}
+
+.left-content p span {
+    font-weight: 700;
+}
+
+.profile-img {
+    width: 70%;
+    margin-bottom: 4vw;
+}
+
+.icon-co,
+.icon-co a {
+    border: none;
+    text-decoration: none;
+    margin-top: 3vw;
+    z-index: 3;
+}
+
+.icon-co a img {
+    height: 2.4vw;
+    cursor: pointer;
+}
+
+.right-content {
+    height: 100%;
+    width: 79%;
+    padding-top: 4vw;
+    position: relative;
+}
+
+.right-content h1 {
+    font-size: 3vw;
+    padding-left: 5vw;
+}
+
+.line {
+    width: 30%;
+    height: 0.2vw;
+    margin-right: 1vw;
+    background-color: black;
+}
+
+.nim {
+    padding-left: 5vw;
+    margin-top: 1vw;
+    display: flex;
+    align-items: center;
+    font-size: 1.3vw;
+}
+
+.about {
+    padding-left: 5vw;
+    width: 70%;
+    margin-top: 1vw;
+    font-size: 1vw;
+    line-height: 2vw;
+}
+
+.circle-wisnu {
+    position: absolute;
+    right: 4vw;
+    top: 3vw;
+    width: 12vw;
+    animation: rotate 10s linear infinite;
+}
+
+.co-link {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6vw;
+    position: absolute;
+    bottom: 8vw;
+}
+
+
+.co-link div {
+    width: 75%;
+    height: 5.2vw;
+    border: 0.4vw solid black;
+    right: 9%;
+    top: -0.6vw;
+    position: absolute;
+    border-radius: 0.4vw;
+    background-color: none;
+}
+
+.github-link {
+    width: 80%;
+    height: 6vw;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 2vw;
+    color: white;
+    border-radius: 0.4vw;
+    z-index: 3;
+    transition: 0.4s ease;
+}
+
+.github-link:hover {
+    transform: translate(1vw, -0.6vw);
+}
+
+.github-link img {
+    width: 8%;
+    margin-left: 2vw;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
