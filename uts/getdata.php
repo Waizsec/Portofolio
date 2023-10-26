@@ -10,15 +10,20 @@ function csvToJson($csvUrl) {
     while (($row = fgetcsv($fp))) {
         $data[] = array_combine($headers, $row);
     }
+    // fclose($fp);
+    // print_r($data);
+
+    // $jsonArray = [];
+
+    // foreach ($data as $row) {
+    //     $jsonArrayItem = $row;
+    //     $jsonArray[] = $jsonArrayItem;
+    // }
 
     // return json_encode($jsonArray);
-    fclose($fp);
-    print_r($data);
     return $data;
 }
 
 $csvUrl = 'datapribadi.csv';
 $jsonData = csvToJson($csvUrl);
-
-header('Content-Type: application/json');
 ?>

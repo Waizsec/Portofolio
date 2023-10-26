@@ -1,5 +1,5 @@
 <?php 
-    require_once 'getcsv2json.php';
+    require_once 'getdata.php';
     $displaydata = $jsonData;
     if (isset($_GET['search'])) {
         $searchTerm = $_GET['search'];
