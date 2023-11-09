@@ -1,7 +1,7 @@
 <?php
 $url = 'https://wisnudanu.alwaysdata.net/uts/getcsv2json.php';
 $json_data = file_get_contents($url);
-ini_set('auto_detect_line_endings', true);
+// ini_set('auto_detect_line_endings', true);
 $data = json_decode($json_data, true);
 $dataReversed = array_reverse($data);
 ?>
