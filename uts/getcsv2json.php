@@ -1,24 +1,18 @@
 <?php
+function csv_to_json($file_path) {
+    $csv = array_map('str_getcsv', file($file_path));
+    $json = json_encode($csv);
 
-function csvToJson($csvUrl) {
-    $csvData = [];
-    
-    $fp = fopen($csvUrl, 'r');
-    $headers = fgetcsv($fp); // Get column headers
-
-    $data = array();
-    while (($row = fgetcsv($fp))) {
-        $data[] = array_combine($headers, $row);
-    }
-
-    // return json_encode($jsonArray);
-    fclose($fp);
-    print_r($data);
-    return $data;
+    return $json;
 }
 
-$csvUrl = 'datapribadi.csv';
-$jsonData = csvToJson($csvUrl);
+$csv_file_path = 'datapribadi.csv';
 
-header('Content-Type: application/json');
+if (file_exists($csv_file_path)) {
+    $json_data = csv_to_json($csv_file_path);
+    header('Content-Type: application/json');
+    echo $json_data;
+} else {
+    echo 'CSV file not found.';
+}
 ?>
