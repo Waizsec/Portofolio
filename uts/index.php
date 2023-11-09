@@ -1,5 +1,5 @@
 <?php
-$url = 'http://localhost/portofolio/uts/getcsv2json.php';
+$url = 'https://wisnudanu.alwaysdata.net/uts/getcsv2json.php';
 $json_data = file_get_contents($url);
 ini_set('auto_detect_line_endings', true);
 $data = json_decode($json_data, true);
@@ -31,7 +31,7 @@ $dataReversed = array_reverse($data);
 <body class="bg-abu flex px-10">
     <div class="w-2/6 mx-auto bg-white p-5 rounded-md shadow-md mr-10 h-screen fixed top-6">
         <h1 class="text-2xl font-semibold mb-4">Tambahkan Data</h1>
-        <form action="http://localhost/portofolio/uts/insertdata.php" method="post">
+        <form action="https://wisnudanu.alwaysdata.net/uts/insertdata.php" method="post">
             <input type="hidden" name="csv_url" value="datapribadi.csv">
                 <div class="flex flex-wrap -mx-5 mb-4">
                     <div class="w-1/2 px-5 mb-4">
